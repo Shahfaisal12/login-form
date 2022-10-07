@@ -124,7 +124,7 @@ const Signup = () => {
                           </Link>
                         </span>
                       </div>
-                      <button type="submit" className="btn btn-primary">
+                      <button type="submit" className="btn btn-lg btn-dark">
                         Submit
                       </button>
                     </form>
