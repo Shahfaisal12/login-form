@@ -28,11 +28,11 @@ const Signup = () => {
 
   return (
     <div className="signup-section pt-5">
-      <div className="container w-75">
+      <div className="container mw-600">
         <div class="shadow mb-5 bg-body rounded">
           <div className="container">
             <div className="row">
-              <div className="col-md-6 d-md-block col-12 p-0">
+              <div className="col-md-6 col-12 d-none d-md-block p-0">
                 <img
                   className="img-fluid"
                   src="assests/images/signup.jpg"
