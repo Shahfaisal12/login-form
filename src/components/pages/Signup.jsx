@@ -1,9 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Signup = () => {
-  const getInputValue = (event) => {
-    const userValue = event.target.value;
-    console.log(userValue);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [rePassword, setRePassword] = useState("");
+
+  const handleSubmit = (event) => {
+    console.log(" On handleSubmit Result is");
+    event.preventDefault();
+
+    console.log("email:", firstName);
+    console.log("email:", lastName);
+    console.log("email:", email);
+    console.log("email:", password);
+    console.log("passsword:", rePassword);
+
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+    setRePassword("");
   };
 
   return (
@@ -26,23 +46,31 @@ const Signup = () => {
                       User SignUP
                     </h1>
                     <h5 className="fw-600  text-center">WELCOME</h5>
-                    <form className=" mt-5">
+                    <form className=" mt-5" onSubmit={handleSubmit}>
                       <div className="mb-3">
                         <label className="form-label">First Name</label>
                         <input
                           type="text"
                           className="form-control"
-                          onChange={getInputValue}
+                          name="first_name"
+                          onChange={(event) => setFirstName(event.target.value)}
+                          value={firstName}
                         />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Last Name</label>
-                        <input type="text" className="form-control" onChange={getInputValue} />
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="last_name"
+                          onChange={(event) => setLastName(event.target.value)}
+                          value={lastName}
+                        />
                       </div>
                       <div className="mb-3">
                         <label
                           htmlFor="exampleInputEmail1"
-                          className="form-label" 
+                          className="form-label"
                         >
                           Email address
                         </label>
@@ -51,7 +79,9 @@ const Signup = () => {
                           className="form-control"
                           id="exampleInputEmail1"
                           aria-describedby="emailHelp"
-                          onChange={getInputValue}
+                          name="email"
+                          onChange={(event) => setEmail(event.target.value)}
+                          value={email}
                         />
                       </div>
                       <div className="mb-3">
@@ -65,7 +95,9 @@ const Signup = () => {
                           type="password"
                           className="form-control"
                           id="exampleInputPassword1"
-                          onChange={getInputValue}
+                          name="password"
+                          onChange={(event) => setPassword(event.target.value)}
+                          value={password}
                         />
                       </div>
                       <div className="mb-3">
@@ -78,16 +110,18 @@ const Signup = () => {
                         <input
                           type="password"
                           className="form-control"
-                          id="exampleInputPassword1"
-                          onChange={getInputValue}
+                          id="exampleInputPassword2"
+                          name="repassword"
+                          onChange={(event) => setRePassword(event.target.value)}
+                          value={rePassword}
                         />
                       </div>
                       <div className="mb-3">
                         <span className="">
-                          Create Account{" "}
-                          <a href="/signup" className="">
+                          Alreadt Account
+                          <Link to="/login" className="">
                             Click here
-                          </a>
+                          </Link>
                         </span>
                       </div>
                       <button type="submit" className="btn btn-primary">

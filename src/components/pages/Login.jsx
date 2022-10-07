@@ -1,10 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {useState} from 'react';
 
 const Login = () => {
-  const getInputValue = (event) => {
-    const userValue = event.target.value;
-    console.log(userValue);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (event) => {
+    console.log(" On handleSubmit Result is");
+    event.preventDefault(); 
+
+    console.log("email:", email);
+    console.log("passsword:", password);
+
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -27,7 +38,7 @@ const Login = () => {
                       User Login
                     </h1>
                     <h5 className="fw-600  text-center">WELCOME</h5>
-                    <form className=" mt-5">
+                    <form className=" mt-5" onSubmit={handleSubmit}>
                       <div className="mb-3">
                         <label
                           htmlFor="exampleInputEmail1"
@@ -40,7 +51,9 @@ const Login = () => {
                           className="form-control"
                           id="exampleInputEmail1"
                           aria-describedby="emailHelp"
-                          onChange={getInputValue}
+                          name="email"
+                          onChange={(event) => setEmail(event.target.value)}
+                          value={email}
                         />
                       </div>
                       <div className="mb-3">
@@ -54,7 +67,9 @@ const Login = () => {
                           type="password"
                           className="form-control"
                           id="exampleInputPassword1"
-                          onChange={getInputValue}
+                          name="email"
+                          onChange={(event) => setPassword(event.target.value)}
+                          value={password}
                         />
                       </div>
                       <div className="mb-3">
