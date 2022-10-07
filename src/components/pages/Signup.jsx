@@ -13,11 +13,11 @@ const Signup = () => {
     console.log(" On handleSubmit Result is");
     event.preventDefault();
 
-    console.log("email:", firstName);
-    console.log("email:", lastName);
+    console.log("first_name:", firstName);
+    console.log("last_name:", lastName);
     console.log("email:", email);
-    console.log("email:", password);
-    console.log("passsword:", rePassword);
+    console.log("password:", password);
+    console.log("repassword:", rePassword);
 
     setFirstName("");
     setLastName("");
