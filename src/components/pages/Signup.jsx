@@ -43,10 +43,10 @@ const Signup = () => {
                 <div className="signup-form py-3">
                   <div className="form-inner">
                     <h1 className="display-3 fw-bold  text-center">
-                      User SignUP
+                      SignUP Form
                     </h1>
                     <h5 className="fw-600  text-center">WELCOME</h5>
-                    <form className=" mt-5" onSubmit={handleSubmit}>
+                    <form className=" mt-3" onSubmit={handleSubmit}>
                       <div className="mb-3">
                         <label className="form-label">First Name</label>
                         <input

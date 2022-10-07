@@ -35,7 +35,7 @@ const Login = () => {
                 <div className="login-form  py-3">
                   <div className="form-inner">
                     <h1 className="display-3 fw-bold  text-center">
-                      User Login
+                      Login Form
                     </h1>
                     <h5 className="fw-600  text-center">WELCOME</h5>
                     <form className=" mt-5" onSubmit={handleSubmit}>
