@@ -119,7 +119,7 @@ const Signup = () => {
                       <div className="mb-3">
                         <span className="">
                           Alreadt Account
-                          <Link to="/login" className="">
+                          <Link to="/login" className="mx-1">
                             Click here
                           </Link>
                         </span>

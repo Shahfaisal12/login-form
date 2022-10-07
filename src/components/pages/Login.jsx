@@ -75,7 +75,7 @@ const Login = () => {
                       <div className="mb-3">
                         <span className="">
                           Create Account{" "}
-                          <Link to="/signup" className="">
+                          <Link to="/signup" className="mx-1">
                             Click here
                           </Link>
                         </span>

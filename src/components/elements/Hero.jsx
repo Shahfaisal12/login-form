@@ -11,8 +11,8 @@ const Hero = () => {
             First you have to login or sigin up
           </h4>
           <div className="">
-            <Link className="btn btn-primary " to='/login'>Login</Link>
-            <Link to="/signup" className="d-block mt-1" >SiginUp if you have already acount </Link>
+            <Link className="btn btn-primary " to='/login'>Login</Link> <br />
+              <span>Create Account </span><Link to="/signup" className="mt-1 mx-1" >SiginUp </Link>
           </div>
         </div>
       </div>
