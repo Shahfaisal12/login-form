@@ -13,14 +13,14 @@ const Login = () => {
         <div class="shadow mb-5 bg-body rounded">
           <div className="container">
             <div className="row">
-              <div className="col-md-6 p-0">
+              <div className="col-md-6 col-12 d-none d-md-block p-0">
                 <img
                   className="img-fluid"
                   src="assests/images/login-3.jpg"
                   alt=""
                 />
               </div>
-              <div className="col-md-6  d-flex align-items-center justify-content-center">
+              <div className="col-md-6 col-12 d-flex align-items-center justify-content-center">
                 <div className="login-form  py-3">
                   <div className="form-inner">
                     <h1 className="display-3 fw-bold  text-center">
