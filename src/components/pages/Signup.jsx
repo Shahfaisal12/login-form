@@ -28,7 +28,7 @@ const Signup = () => {
 
   return (
     <div className="signup-section pt-5">
-      <div className="container mw-600">
+      <div className="container mw-1000">
         <div class="shadow mb-5 bg-body rounded">
           <div className="container">
             <div className="row">
