@@ -20,7 +20,7 @@ const Header = () => {
                   <Link className="nav-link" to='/create' >Create</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link disabled" href="/" tabIndex={-1} aria-disabled="true">Disabled</a>
+                  <Link className="nav-link" to='/increment'>Increment</Link>
                 </li>
               </ul>
               <form className="d-flex">

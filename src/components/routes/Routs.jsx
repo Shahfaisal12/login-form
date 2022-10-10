@@ -7,6 +7,7 @@ import PageNotFound from '../pages/PageNotFound';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import Create from '../pages/Create';
+import Increment from '../pages/Increment';
 
 
 const Routs = () => {
@@ -19,6 +20,7 @@ const Routs = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
             <Route path='/create' element={<Create />} />
+            <Route path='/increment' element={<Increment />} />
             <Route path='/*' element={<PageNotFound />} />
           </Routes>
         </Base>
