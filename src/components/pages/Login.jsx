@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {useState} from 'react';
+import { useState } from 'react';
 
 const Login = () => {
 
@@ -9,7 +9,7 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     console.log(" On handleSubmit Result is");
-    event.preventDefault(); 
+    event.preventDefault();
 
     console.log("email:", email);
     console.log("passsword:", password);
@@ -48,6 +48,7 @@ const Login = () => {
                         </label>
                         <input
                           type="email"
+                          autoComplete="off"
                           className="form-control"
                           id="exampleInputEmail1"
                           aria-describedby="emailHelp"
@@ -65,6 +66,7 @@ const Login = () => {
                         </label>
                         <input
                           type="password"
+                          autoComplete="off"
                           className="form-control"
                           id="exampleInputPassword1"
                           name="email"

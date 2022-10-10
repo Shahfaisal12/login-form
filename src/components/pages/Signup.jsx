@@ -1,30 +1,47 @@
-import React from "react";
+// import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Signup = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [rePassword, setRePassword] = useState("");
+
+  const [userRegistration, setUserRegistration] = useState({
+    first_name: '',
+    last_name: '',
+    email: '',
+    password: '',
+    rePassword: ''
+  });
+
+
+
+  const handleInput = (event) => {
+
+    const name = event.target.name;
+    const value = event.target.value;
+    // console.log(name, value);
+
+    setUserRegistration({ ...userRegistration, [name]: value })
+
+  }
+
 
   const handleSubmit = (event) => {
     console.log(" On handleSubmit Result is");
     event.preventDefault();
 
-    console.log("first_name:", firstName);
-    console.log("last_name:", lastName);
-    console.log("email:", email);
-    console.log("password:", password);
-    console.log("repassword:", rePassword);
+    const newRecord = { ...userRegistration, id: new Date().getTime().toString() }
 
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPassword("");
-    setRePassword("");
+    console.log(newRecord);
+    localStorage.setItem('keys', JSON.stringify(newRecord))
+    // sessionStorage.setItem('items', JSON.stringify(newRecord))
+
+    .setUserRegistration({first_name:'', last_name:'', email:'', password:'', rePassword:''})
+
   };
+
+  console.log(localStorage.getItem("keys"))
+  // console.log(sessionStorage.getItem("items"))
+
 
   return (
     <div className="signup-section pt-5">
@@ -51,20 +68,22 @@ const Signup = () => {
                         <label className="form-label">First Name</label>
                         <input
                           type="text"
+                          autoComplete="off"
                           className="form-control"
                           name="first_name"
-                          onChange={(event) => setFirstName(event.target.value)}
-                          value={firstName}
+                          onChange={handleInput}
+                          value={userRegistration.first_name}
                         />
                       </div>
                       <div className="mb-3">
                         <label className="form-label">Last Name</label>
                         <input
                           type="text"
+                          autoComplete="off"
                           className="form-control"
                           name="last_name"
-                          onChange={(event) => setLastName(event.target.value)}
-                          value={lastName}
+                          onChange={handleInput}
+                          value={userRegistration.last_name}
                         />
                       </div>
                       <div className="mb-3">
@@ -76,12 +95,13 @@ const Signup = () => {
                         </label>
                         <input
                           type="email"
+                          autoComplete="off"
                           className="form-control"
                           id="exampleInputEmail1"
                           aria-describedby="emailHelp"
                           name="email"
-                          onChange={(event) => setEmail(event.target.value)}
-                          value={email}
+                          onChange={handleInput}
+                          value={userRegistration.email}
                         />
                       </div>
                       <div className="mb-3">
@@ -93,11 +113,12 @@ const Signup = () => {
                         </label>
                         <input
                           type="password"
+                          autoComplete="off"
                           className="form-control"
                           id="exampleInputPassword1"
                           name="password"
-                          onChange={(event) => setPassword(event.target.value)}
-                          value={password}
+                          onChange={handleInput}
+                          value={userRegistration.password}
                         />
                       </div>
                       <div className="mb-3">
@@ -109,11 +130,12 @@ const Signup = () => {
                         </label>
                         <input
                           type="password"
+                          autoComplete="off"
                           className="form-control"
                           id="exampleInputPassword2"
-                          name="repassword"
-                          onChange={(event) => setRePassword(event.target.value)}
-                          value={rePassword}
+                          name="rePassword"
+                          onChange={handleInput}
+                          value={userRegistration.rePassword}
                         />
                       </div>
                       <div className="mb-3">
